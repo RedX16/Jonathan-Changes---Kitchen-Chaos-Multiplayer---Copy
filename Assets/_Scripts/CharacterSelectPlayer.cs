@@ -4,6 +4,7 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
+using static PlayerCharacterCustomized;
 
 public class CharacterSelectPlayer : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class CharacterSelectPlayer : MonoBehaviour
     [SerializeField] PlayerVisual playerVisual;
     [SerializeField] Button kickButton;
     [SerializeField] TextMeshPro playerNameText;
+    [SerializeField] PlayerCharacterCustomized playerCustom;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class CharacterSelectPlayer : MonoBehaviour
             PlayerData playerData = KitchenGameMultiplayer.Instance.GetPlayerDataFromPlayerIndex(playerIndex);
             KitchenGameLobby.Instance.KickPlayer(playerData.playerId.ToString());
             KitchenGameMultiplayer.Instance.KickPlayer(playerData.clientId);
+            playerCustom.SetCustomization(PlayerCharacterCustomized.Customization.LoadSpawn(playerData.customization.ToString()));
         });
     }
 

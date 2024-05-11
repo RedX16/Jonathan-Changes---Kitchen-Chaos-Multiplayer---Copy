@@ -109,7 +109,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6657998009922166292, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: 6657998009922166292, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -440,7 +440,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -5873653914744133658, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: -5873653914744133658, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -663,7 +663,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -5866934017332945184, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: -5866934017332945184, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -1056,7 +1056,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -5003366202268185646, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: -5003366202268185646, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -1546,7 +1546,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 3131188959575262684, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: 3131188959575262684, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -2022,7 +2022,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 8485970674117699935, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: 8485970674117699935, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -2427,7 +2427,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -6336567329166732831, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: -6336567329166732831, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -2587,7 +2587,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 7666266049737368757, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: 7666266049737368757, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -2715,7 +2715,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 2959467708922500008, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: 2959467708922500008, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -2874,7 +2874,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2775079630602389434, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: -2775079630602389434, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -3002,7 +3002,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -3178576508544696699, guid: 310a371fe6aa2c041bf2aae80d78c372, type: 3}
+  m_Mesh: {fileID: -3178576508544696699, guid: bf4d66b32b72a7c4493948d9e1e3197f, type: 3}
   m_Bones:
   - {fileID: 7325638031750701683}
   - {fileID: 6416579272175972785}
@@ -3353,6 +3353,7 @@ MonoBehaviour:
   playerVisual: {fileID: 3131629794636848505}
   kickButton: {fileID: 455847287263919923}
   playerNameText: {fileID: 8699060065851494471}
+  playerCustom: {fileID: 0}
 --- !u!114 &-2664396672732345865
 MonoBehaviour:
   m_ObjectHideFlags: 0
