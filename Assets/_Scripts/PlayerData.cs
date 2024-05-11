@@ -11,6 +11,7 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
     public int colorId;
     public FixedString64Bytes playerName;
     public FixedString64Bytes playerId;
+    public FixedString512Bytes customization;
 
     public bool Equals(PlayerData other)
     {
@@ -23,6 +24,7 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
         serializer.SerializeValue(ref colorId);
         serializer.SerializeValue(ref playerName);
         serializer.SerializeValue(ref playerId);
+        serializer.SerializeValue(ref customization);
 
     }
 }
