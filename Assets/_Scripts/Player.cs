@@ -53,7 +53,7 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
 
         PlayerData playerData = KitchenGameMultiplayer.Instance.GetPlayerDataFromClientId(OwnerClientId);
         playerVisual.SetName(playerData.playerName.Value);
-     
+        Debug.Log("Start in player...");
     }
 
     public override void OnNetworkSpawn()

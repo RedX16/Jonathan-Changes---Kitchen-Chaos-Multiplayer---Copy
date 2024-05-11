@@ -56,7 +56,7 @@ public class CharacterSelectPlayer : MonoBehaviour
             playerNameText.text = playerData.playerName.ToString();
             playerCustom.SetCustomization(Customization.LoadSpawn(playerData.customization.ToString()));
             Debug.Log($"Getting Player data {playerData.playerName} {playerData.customization}");
-            playerCustom.Randomize();
+            Debug.Log($"{playerData.playerName.ToString()} - {gameObject.name}");
         } else { Hide(); }
     }
 

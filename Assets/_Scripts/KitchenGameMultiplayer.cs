@@ -106,7 +106,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
             colorId = GetFirstUnusedColorId(),
         });
         Debug.Log("Setting player data");
-        SetPlayerNameServerRpc(GetPlayerName());
+        SetPlayerNameServerRpc(GetPlayerName(), customizationJson);
         SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
 
@@ -140,19 +140,19 @@ public class KitchenGameMultiplayer : NetworkBehaviour
 
     private void NetworkManager_Client_OnClientConnectedCallback(ulong clientId)
     {
-        SetPlayerNameServerRpc(GetPlayerName());
+        SetPlayerNameServerRpc(GetPlayerName(), customizationJson);
         SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SetPlayerNameServerRpc(string playerName, ServerRpcParams serverRpcParams = default)
+    private void SetPlayerNameServerRpc(string playerName, string customization, ServerRpcParams serverRpcParams = default)
     {
         int playerDataIndex = GetPlayerDataIndexFromClientId(serverRpcParams.Receive.SenderClientId);
 
         PlayerData playerData = playerDataNetworkList[playerDataIndex];
 
         playerData.playerName = playerName;
-        playerData.customization = customizationJson;
+        playerData.customization = customization;
 
         playerDataNetworkList[playerDataIndex] = playerData;
         Debug.Log("setting player name and customization replicated to server");
@@ -319,6 +319,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
         playerData.colorId = colorId;
 
         playerDataNetworkList[playerDataIndex] = playerData;
+        Debug.Log($"KitchenGameMultiplayer - {playerData.customization}");
     }
 
     private bool IsColorAvailable(int colorId)
