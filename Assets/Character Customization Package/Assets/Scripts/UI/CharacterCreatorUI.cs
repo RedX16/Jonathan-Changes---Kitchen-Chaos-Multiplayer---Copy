@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CharacterCreatorUI : MonoBehaviour {
 
 
-    private const string PLAYER_PREFS_KEY = "PlayerCustomization";
+    public const string PLAYER_PREFS_KEY = "PlayerCustomization";
 
 
     [SerializeField] private PlayerCharacterCustomized playerCharacterCustomized;

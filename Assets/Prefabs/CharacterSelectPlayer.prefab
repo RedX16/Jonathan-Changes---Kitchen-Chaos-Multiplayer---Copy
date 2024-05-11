@@ -3353,7 +3353,7 @@ MonoBehaviour:
   playerVisual: {fileID: 3131629794636848505}
   kickButton: {fileID: 455847287263919923}
   playerNameText: {fileID: 8699060065851494471}
-  playerCustom: {fileID: 0}
+  playerCustom: {fileID: -2664396672732345865}
 --- !u!114 &-2664396672732345865
 MonoBehaviour:
   m_ObjectHideFlags: 0

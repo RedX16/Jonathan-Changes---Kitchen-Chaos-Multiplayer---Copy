@@ -31,7 +31,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
 
     private NetworkList<PlayerData> playerDataNetworkList;
     private string playerName;
-
+    private string customizationJson;
 
 
     private void Awake()
@@ -42,8 +42,11 @@ public class KitchenGameMultiplayer : NetworkBehaviour
 
         playerName = PlayerPrefs.GetString(PLAYER_PREFS_PLAYER_NAME_MULTIPLAYER, "PlayerName" + UnityEngine.Random.Range(100, 1000));
 
+        customizationJson = PlayerPrefs.GetString(CharacterCreatorUI.PLAYER_PREFS_KEY);
+
         playerDataNetworkList = new NetworkList<PlayerData>();
         playerDataNetworkList.OnListChanged += PlayerDataNetworkList_OnListChanged;
+        Debug.Log("awake");
     }
 
     private void Start()
@@ -54,6 +57,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
             StartHost();
             Loader.LoadNetwork(Loader.Scene.GameScene);
         }
+        Debug.Log("STart");
     }
 
     public string GetPlayerName()
@@ -64,7 +68,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
     public void SetPlayerName(string playerName)
     {
         this.playerName = playerName;
-
+        Debug.Log("SEtting player name");
         PlayerPrefs.SetString(PLAYER_PREFS_PLAYER_NAME_MULTIPLAYER, playerName);
     }
 
@@ -101,6 +105,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
             clientId = clientId,
             colorId = GetFirstUnusedColorId(),
         });
+        Debug.Log("Setting player data");
         SetPlayerNameServerRpc(GetPlayerName());
         SetPlayerIdServerRpc(AuthenticationService.Instance.PlayerId);
     }
@@ -147,8 +152,10 @@ public class KitchenGameMultiplayer : NetworkBehaviour
         PlayerData playerData = playerDataNetworkList[playerDataIndex];
 
         playerData.playerName = playerName;
+        playerData.customization = customizationJson;
 
         playerDataNetworkList[playerDataIndex] = playerData;
+        Debug.Log("setting player name and customization replicated to server");
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -275,6 +282,9 @@ public class KitchenGameMultiplayer : NetworkBehaviour
 
     public PlayerData GetPlayerData()
     {
+        var data = GetPlayerDataFromClientId(NetworkManager.Singleton.LocalClientId);
+        Debug.Log($"Getting Player data {data.playerName} {data.customization}");
+
         return GetPlayerDataFromClientId(NetworkManager.Singleton.LocalClientId);
     }
 

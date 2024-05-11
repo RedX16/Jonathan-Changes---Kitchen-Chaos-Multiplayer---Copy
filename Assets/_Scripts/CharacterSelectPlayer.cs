@@ -22,7 +22,6 @@ public class CharacterSelectPlayer : MonoBehaviour
             PlayerData playerData = KitchenGameMultiplayer.Instance.GetPlayerDataFromPlayerIndex(playerIndex);
             KitchenGameLobby.Instance.KickPlayer(playerData.playerId.ToString());
             KitchenGameMultiplayer.Instance.KickPlayer(playerData.clientId);
-            playerCustom.SetCustomization(PlayerCharacterCustomized.Customization.LoadSpawn(playerData.customization.ToString()));
         });
     }
 
@@ -54,9 +53,10 @@ public class CharacterSelectPlayer : MonoBehaviour
 
             PlayerData playerData = KitchenGameMultiplayer.Instance.GetPlayerDataFromPlayerIndex(playerIndex);
             readyGameObject.SetActive(CharacterSelectReady.Instance.IsPlayerReady(playerData.clientId));
-
             playerNameText.text = playerData.playerName.ToString();
-
+            playerCustom.SetCustomization(Customization.LoadSpawn(playerData.customization.ToString()));
+            Debug.Log($"Getting Player data {playerData.playerName} {playerData.customization}");
+            playerCustom.Randomize();
         } else { Hide(); }
     }
 
