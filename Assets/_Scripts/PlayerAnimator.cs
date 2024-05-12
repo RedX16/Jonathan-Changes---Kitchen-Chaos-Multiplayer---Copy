@@ -1,3 +1,4 @@
+using QFSW.QC.Actions;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -25,6 +26,11 @@ public class PlayerAnimator : NetworkBehaviour {
         }
 
         animator.SetBool(IS_WALKING, player.IsWalking());
+
     }
 
+    public void Dance()
+    {
+        animator.SetTrigger("Dance");
+    }
 }

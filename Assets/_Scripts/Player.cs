@@ -1,3 +1,4 @@
+using QFSW.QC.Actions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
     private Vector3 lastInteractDir;
     private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
+    PlayerAnimator playerAnimator;
 
 
     private void Start()
@@ -57,6 +59,8 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
         playerVisual.SetName(playerData.playerName.Value);
         playerCustom.SetCustomization(Customization.LoadSpawn(playerData.customization.ToString()));
         Debug.Log("Start in player...");
+        playerAnimator = GetComponent<PlayerAnimator>();
+
     }
 
     public override void OnNetworkSpawn()
@@ -152,6 +156,11 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
         {
             SetSelectedCounter(null);
         }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            playerAnimator.Dance();
+        }
     }
 
     private void HandleMovement()
@@ -162,7 +171,6 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
 
         float moveDistance = moveSpeed * Time.deltaTime;
         float playerRadius = .7f;
-        float playerHeight = 2f;
         bool canMove = !Physics.BoxCast(transform.position, Vector3.one * playerRadius, moveDir, Quaternion.identity, moveDistance, collisionsLayerMask);
 
         if (!canMove)
