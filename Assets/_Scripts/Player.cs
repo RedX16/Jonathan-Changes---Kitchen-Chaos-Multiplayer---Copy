@@ -60,7 +60,16 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
         playerCustom.SetCustomization(Customization.LoadSpawn(playerData.customization.ToString()));
         Debug.Log("Start in player...");
         playerAnimator = GetComponentInChildren<PlayerAnimator>();
+        KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
 
+    }
+
+    private void KitchenGameManager_OnStateChanged(object sender, EventArgs e)
+    {
+        if(KitchenGameManager.Instance.IsGameOver())
+        {
+            playerAnimator.WinGame();
+        }
     }
 
     public override void OnNetworkSpawn()
@@ -165,6 +174,11 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             playerAnimator.Death();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            playerAnimator.Fight();
         }
     }
 

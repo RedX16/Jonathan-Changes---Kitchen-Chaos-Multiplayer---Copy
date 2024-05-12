@@ -13,7 +13,7 @@ public class PlayerAnimator : NetworkBehaviour {
     private const string DEATH2 = "Death 2";
     private const string DEATH3 = "Death 3";
     private const string FIGHT = "Fight";
-    private const string Win = "Win";
+    private const string WIN = "Win";
 
 
 
@@ -43,12 +43,22 @@ public class PlayerAnimator : NetworkBehaviour {
 
     public void Death()
     {
-        var i = UnityEngine.Random.Range(0f, 2f);
+        var i = UnityEngine.Random.Range(0, 2);
         switch (i)
         {
             case 0: animator.SetTrigger(DEATH1); break;
-                case 1: animator.SetTrigger(DEATH2); break;
-                case 2: animator.SetTrigger(DEATH3); break;
+            case 1: animator.SetTrigger(DEATH2); break;
+            case 2: animator.SetTrigger(DEATH3); break;
         }
+    }
+
+    public void Fight()
+    {
+        animator.SetTrigger(FIGHT);
+    }
+
+    public void WinGame()
+    {
+        animator.SetTrigger(WIN);
     }
 }

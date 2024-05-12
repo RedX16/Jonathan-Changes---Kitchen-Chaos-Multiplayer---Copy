@@ -36,7 +36,7 @@ public class KitchenGameManager : NetworkBehaviour
     private bool isLocalPlayerReady;
     private NetworkVariable<float> countdownToStartTimer = new NetworkVariable<float>(3f);
     private NetworkVariable<float> gamePlayingTimer = new NetworkVariable<float>(0f);
-    private float gamePlayingTimerMax = 90f;
+    private float gamePlayingTimerMax = 5f;
     private bool isLocalGamePaused = false;
     private NetworkVariable<bool> isGamePaused = new NetworkVariable<bool>(false);
     private Dictionary<ulong, bool> playerReadyDictionary;
@@ -170,6 +170,7 @@ public class KitchenGameManager : NetworkBehaviour
                 }
                 break;
             case State.GameOver:
+                
                 break;
         }
     }
@@ -201,6 +202,7 @@ public class KitchenGameManager : NetworkBehaviour
     public bool IsGameOver()
     {
         return state.Value == State.GameOver;
+
     }
 
     public bool IsWaitingToStart()
