@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class DeliveryManager : NetworkBehaviour {
 
@@ -24,6 +25,7 @@ public class DeliveryManager : NetworkBehaviour {
     private float spawnRecipeTimerMax = 4f;
     private int waitingRecipesMax = 4;
     private int successfulRecipesAmount;
+    int score;
 
 
     private void Awake() {
@@ -113,7 +115,7 @@ public class DeliveryManager : NetworkBehaviour {
 
     [ClientRpc]
     private void DeliverCorrectRecipeClientRpc(int waitingRecipeSOListIndex) {
-        successfulRecipesAmount++;
+        score += waitingRecipeSOList[waitingRecipeSOListIndex].recipeScore;
 
         waitingRecipeSOList.RemoveAt(waitingRecipeSOListIndex);
 
@@ -127,7 +129,7 @@ public class DeliveryManager : NetworkBehaviour {
     }
 
     public int GetSuccessfulRecipesAmount() {
-        return successfulRecipesAmount;
+        return score;
     }
 
 }
