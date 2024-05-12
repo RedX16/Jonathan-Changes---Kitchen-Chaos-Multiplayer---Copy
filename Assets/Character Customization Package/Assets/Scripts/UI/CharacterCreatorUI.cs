@@ -37,6 +37,9 @@ public class CharacterCreatorUI : MonoBehaviour {
         rotateLeftButton.onClick.AddListener(() => {
             playerTargetForward = UtilsClass.ApplyRotationToVectorXZ(playerTargetForward, +90);
         });
+        backButton.onClick.AddListener(() => {
+            Loader.Load(Loader.Scene.MainMenuScene);
+        });
 
         playerTargetForward = playerCharacterCustomized.transform.forward;
     }
