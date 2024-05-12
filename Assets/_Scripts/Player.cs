@@ -180,6 +180,10 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
         {
             playerAnimator.Fight();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            playerAnimator.TPose();
+        }
     }
 
     private void HandleMovement()

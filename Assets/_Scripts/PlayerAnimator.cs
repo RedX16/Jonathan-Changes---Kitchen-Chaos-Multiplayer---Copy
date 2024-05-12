@@ -14,6 +14,7 @@ public class PlayerAnimator : NetworkBehaviour {
     private const string DEATH3 = "Death 3";
     private const string FIGHT = "Fight";
     private const string WIN = "Win";
+    private const string TPOSE = "TPose";
 
 
 
@@ -60,5 +61,10 @@ public class PlayerAnimator : NetworkBehaviour {
     public void WinGame()
     {
         animator.SetTrigger(WIN);
+    }
+
+    public void TPose()
+    {
+        animator.SetTrigger(TPOSE);
     }
 }
