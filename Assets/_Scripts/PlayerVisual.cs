@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerVisual : MonoBehaviour
 {
-
-
     [SerializeField] TextMeshPro playerName;
 
 

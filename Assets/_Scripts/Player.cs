@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
+using static PlayerCharacterCustomized;
 
 public class Player : NetworkBehaviour, IKitchenObjectParent
 {
@@ -38,6 +39,7 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
     [SerializeField] List<Vector3> spawnPositionList;
     [SerializeField] PlayerVisual playerVisual;
     [SerializeField] PlayerNameUI playerNameUI;
+    [SerializeField] PlayerCharacterCustomized playerCustom;
 
 
     private bool isWalking;
@@ -53,6 +55,7 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
 
         PlayerData playerData = KitchenGameMultiplayer.Instance.GetPlayerDataFromClientId(OwnerClientId);
         playerVisual.SetName(playerData.playerName.Value);
+        playerCustom.SetCustomization(Customization.LoadSpawn(playerData.customization.ToString()));
         Debug.Log("Start in player...");
     }
 
