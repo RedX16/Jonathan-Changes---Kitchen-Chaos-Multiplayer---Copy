@@ -59,7 +59,7 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
         playerVisual.SetName(playerData.playerName.Value);
         playerCustom.SetCustomization(Customization.LoadSpawn(playerData.customization.ToString()));
         Debug.Log("Start in player...");
-        playerAnimator = GetComponent<PlayerAnimator>();
+        playerAnimator = GetComponentInChildren<PlayerAnimator>();
 
     }
 
@@ -157,9 +157,14 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
             SetSelectedCounter(null);
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             playerAnimator.Dance();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            playerAnimator.Death();
         }
     }
 

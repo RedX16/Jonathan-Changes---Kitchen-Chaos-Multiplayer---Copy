@@ -8,6 +8,13 @@ public class PlayerAnimator : NetworkBehaviour {
 
 
     private const string IS_WALKING = "IsWalking";
+    private const string DANCE = "Dance";
+    private const string DEATH1 = "Death 1";
+    private const string DEATH2 = "Death 2";
+    private const string DEATH3 = "Death 3";
+    private const string FIGHT = "Fight";
+    private const string Win = "Win";
+
 
 
     [SerializeField] private Player player;
@@ -31,6 +38,17 @@ public class PlayerAnimator : NetworkBehaviour {
 
     public void Dance()
     {
-        animator.SetTrigger("Dance");
+        animator.SetTrigger(DANCE);
+    }
+
+    public void Death()
+    {
+        var i = UnityEngine.Random.Range(0f, 2f);
+        switch (i)
+        {
+            case 0: animator.SetTrigger(DEATH1); break;
+                case 1: animator.SetTrigger(DEATH2); break;
+                case 2: animator.SetTrigger(DEATH3); break;
+        }
     }
 }
