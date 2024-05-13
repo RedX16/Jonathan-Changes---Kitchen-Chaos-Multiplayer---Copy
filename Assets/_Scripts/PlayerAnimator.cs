@@ -44,7 +44,7 @@ public class PlayerAnimator : NetworkBehaviour {
 
     public void Death()
     {
-        var i = UnityEngine.Random.Range(0, 2);
+        var i = UnityEngine.Random.Range(0, 3);
         switch (i)
         {
             case 0: animator.SetTrigger(DEATH1); break;

@@ -135,6 +135,25 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
 
     private void HandleInteractions()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            playerAnimator.Dance();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            playerAnimator.Death();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            playerAnimator.Fight();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            playerAnimator.TPose();
+        }
+
         Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
@@ -166,24 +185,7 @@ public class Player : NetworkBehaviour, IKitchenObjectParent
             SetSelectedCounter(null);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            playerAnimator.Dance();
-        }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            playerAnimator.Death();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            playerAnimator.Fight();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            playerAnimator.TPose();
-        }
     }
 
     private void HandleMovement()
