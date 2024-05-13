@@ -3101,10 +3101,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerVisual Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3294758251327466535, guid: 1c5dda3c7cd3cf742afcade5419faeab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6024899996280613204, guid: 1c5dda3c7cd3cf742afcade5419faeab,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7796899417771450590, guid: 1c5dda3c7cd3cf742afcade5419faeab,
         type: 3}
@@ -3191,14 +3196,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3294758251327466535, guid: 1c5dda3c7cd3cf742afcade5419faeab,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4712517974603108510}
+      addedObject: {fileID: 1463832990657758165}
   m_SourcePrefab: {fileID: 100100000, guid: 1c5dda3c7cd3cf742afcade5419faeab, type: 3}
---- !u!95 &1013440907486858081 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6024899996280613204, guid: 1c5dda3c7cd3cf742afcade5419faeab,
-    type: 3}
-  m_PrefabInstance: {fileID: 6740984306175599157}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8085540979454332433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3294758251327466532, guid: 1c5dda3c7cd3cf742afcade5419faeab,
@@ -3224,7 +3223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
---- !u!114 &4712517974603108510
+--- !u!114 &1463832990657758165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3233,44 +3232,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8085540979454332434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c03b5565f2b485b4a9e6340dfe701c19, type: 3}
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionStateInfoList:
-  - Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: -1590291260
-    TransitionDuration: 0
-    TriggerNameHash: -645213589
-    TransitionIndex: 0
-  - Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: 448993623
-    TransitionDuration: 0
-    TriggerNameHash: -1216297013
-    TransitionIndex: 1
-  - Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: 592323986
-    TransitionDuration: 0
-    TriggerNameHash: 780768881
-    TransitionIndex: 2
-  - Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: 1144237585
-    TransitionDuration: 0
-    TriggerNameHash: 1502521063
-    TransitionIndex: 3
-  - Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: -1952211857
-    TransitionDuration: 0
-    TriggerNameHash: -529831086
-    TransitionIndex: 4
-  - Layer: 0
-    OriginatingState: 2081823275
-    DestinationState: -2004386410
-    TransitionDuration: 0
-    TriggerNameHash: -2004386410
-    TransitionIndex: 5
-  m_Animator: {fileID: 1013440907486858081}
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1

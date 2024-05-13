@@ -1140,6 +1140,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7312045258193379612, guid: c515435e889032a4289bead237de44d0,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: GlobalObjectIdHash
+      value: 3637440900
+      objectReference: {fileID: 0}
     - target: {fileID: 6982700460807742831, guid: a3971cde132fe8e46b0b141a34f4726d,
         type: 3}
       propertyPath: m_Mesh
@@ -1208,9 +1212,10 @@ PrefabInstance:
       value: PlayerVisual Variant (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4712517974603108510, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     - {fileID: 9051081733946064674, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     - {fileID: 3582876523874730731, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 759981215001900841, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     m_AddedGameObjects: []
@@ -1543,6 +1548,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9158327121239737238, guid: 98c824c9680d1dc4b92985326c989751,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: GlobalObjectIdHash
+      value: 2717564029
+      objectReference: {fileID: 0}
     - target: {fileID: 6982700460807742831, guid: a3971cde132fe8e46b0b141a34f4726d,
         type: 3}
       propertyPath: m_Mesh
@@ -1611,9 +1620,10 @@ PrefabInstance:
       value: PlayerVisual Variant (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4712517974603108510, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     - {fileID: 9051081733946064674, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     - {fileID: 3582876523874730731, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 759981215001900841, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     m_AddedGameObjects: []
@@ -2080,6 +2090,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6217572173377209091, guid: ed1a91f0f159c394db23eae53aea7ccc,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: GlobalObjectIdHash
+      value: 4260931193
+      objectReference: {fileID: 0}
     - target: {fileID: 6982700460807742831, guid: a3971cde132fe8e46b0b141a34f4726d,
         type: 3}
       propertyPath: m_Mesh
@@ -2148,9 +2162,10 @@ PrefabInstance:
       value: PlayerVisual Variant (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4712517974603108510, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     - {fileID: 9051081733946064674, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     - {fileID: 3582876523874730731, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 759981215001900841, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     m_AddedGameObjects: []
@@ -2773,6 +2788,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: GlobalObjectIdHash
+      value: 505936882
+      objectReference: {fileID: 0}
     - target: {fileID: 8085540979454332433, guid: a3971cde132fe8e46b0b141a34f4726d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2829,9 +2848,10 @@ PrefabInstance:
       value: PlayerVisual Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4712517974603108510, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     - {fileID: 9051081733946064674, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     - {fileID: 3582876523874730731, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 759981215001900841, guid: a3971cde132fe8e46b0b141a34f4726d, type: 3}
     m_AddedGameObjects: []
