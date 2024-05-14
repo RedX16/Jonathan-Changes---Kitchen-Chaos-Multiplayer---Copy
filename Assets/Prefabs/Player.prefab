@@ -561,6 +561,8 @@ MonoBehaviour:
   - {x: 3, y: 0, z: -3}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: -3}
+  - {x: 0, y: 0, z: -1.5}
+  - {x: -3, y: 0, z: -1.5}
   playerVisual: {fileID: 8178630124339796601}
   playerNameUI: {fileID: 0}
   playerCustom: {fileID: 8190326956465935979}

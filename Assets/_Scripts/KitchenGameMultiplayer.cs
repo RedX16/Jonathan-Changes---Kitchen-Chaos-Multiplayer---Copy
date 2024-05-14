@@ -10,7 +10,7 @@ public class KitchenGameMultiplayer : NetworkBehaviour
 {
 
 
-    public const int MAX_PLAYER_AMOUNT = 6;
+    public const int MAX_PLAYER_AMOUNT = 8;
     private const string PLAYER_PREFS_PLAYER_NAME_MULTIPLAYER = "PlayerNameMultiplayer";
 
 
